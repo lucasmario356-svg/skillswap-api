@@ -28,6 +28,7 @@ exports.signup = async (req, res) => {
     if (err.code === 11000) {
       res.status(400).json({ message: "El correo ya está registrado" });
     } else {
+      console.error("Error en el registro:", err);
       res.status(500).json({ message: "Error en el registro", err });
     }
   }
