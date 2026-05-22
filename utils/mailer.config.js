@@ -1,3 +1,13 @@
+// nodemailer no funcionaba en versiones de hosting free asi que he utilizado brevo para que funcione
+// const nodemailer = require("nodemailer");
+// const transporter = nodemailer.createTransport({
+//   service: "gmail",
+//   auth: {
+//     user: process.env.EMAIL_USER,
+//     pass: process.env.EMAIL_PASS
+//   }
+// });
+
 const https = require("https");
 
 const sendEmail = (to, subject, html) => {
